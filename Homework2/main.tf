@@ -11,11 +11,6 @@ resource "aws_s3_bucket" "example" {
    bucket = "kaizen-datkaiym4509"
 }
 
-resource "time_sleep" "wait" {
-   depends_on = [aws_s3_bucket.example]
-
-   create_duration = "10s"
-}
 
 resource "aws_s3_bucket" "example2" {
    bucket_prefix = "kaizen-"
